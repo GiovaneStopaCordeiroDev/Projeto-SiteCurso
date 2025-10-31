@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    width: 100%;
+    height: 15vh;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #121212;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}   
+
+.nav a:hover {
+    color: #5c5c5c;
+      font-size: 1.4rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.button-closeacount {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: #bb3131;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.user-area {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-closeacount:hover {
+    background-color: #792222;
+    color: rgb(107, 107, 107);
+}
+
+.user-area span {
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.user-area span:hover {
+    color: #9c9c9c;
+    font-weight: bold;
+}
