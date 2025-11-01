@@ -51,7 +51,7 @@ function Home() {
             </div>
 
                 
-            <div className='sessao-beneficios'>
+            <div className='sessao-beneficios' id='beneficios'>
                 <h2 className='title-beneficios'>Benefícios</h2>
                 <div className='conteudo-beneficios'>
                     <div className='beneficios'>
@@ -74,7 +74,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className='sessao-conteudoscurso'>
+            <div className='sessao-conteudoscurso' id='conteudos'>
                 <h2 className='title-curso'>Conteúdos do Curso</h2>
                 <div className='conteudo-curso'>
                     <div className='conteudo conteudo-html'>
@@ -104,7 +104,7 @@ function Home() {
             </div>
 
 
-            <div class="pacotes">
+            <div class="pacotes" id='pacotes'>
                 <h1 class="title-pacotes">Pacotes</h1>
                 <h2 class="subtitle-pacotes">Conheça os nossos pacotes personalizados</h2>
                 <div class="pacotes-conteudo" >

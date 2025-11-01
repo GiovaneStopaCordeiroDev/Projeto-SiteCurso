@@ -29,8 +29,8 @@ function Header() {
             <nav className='nav'>
                 <ul>
                     <li><a href='#'>Home</a></li>
-                     <li><a href='#'>Benefícios</a></li>
-                      <li><a href='#'>Pacotes</a></li>
+                     <li><a href='#beneficios'>Benefícios</a></li>
+                      <li><a href='#pacotes'>Pacotes</a></li>
                 </ul>
             </nav>
 
