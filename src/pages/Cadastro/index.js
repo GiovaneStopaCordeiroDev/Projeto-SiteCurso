@@ -18,7 +18,7 @@ function Cadastro() {
     async function cadastrarUsuario() {
         await createUserWithEmailAndPassword(auth, email, senha)
         .then((value) => {
-            navigate('/home')
+            navigate('/')
             setDetail({
                 uid: value.user.uid,
                 email: value.user.email,
@@ -33,6 +33,8 @@ function Cadastro() {
                 toast.warn('Este e-mail já está sendo usado!');
             } else if (e.code === 'auth/invalid-email') {
                 toast.warn('Formato de e-mail inválido!');
+            } else if (e.code === 'auth/missing-password'){
+                toast.warn('Digite uma senha');
             } else {
                 toast.warn('Erro ao cadastrar: ' + e.code);
             }
@@ -58,7 +60,7 @@ function Cadastro() {
                 
                     <button onClick={cadastrarUsuario}>Cadastrar-se</button>
 
-                    <p>Já tem uma conta? Clique <Link to={"/login"}>Aqui</Link> para se logar</p>
+                    <p>Já tem uma conta? Clique <Link className="p-link" to={"/login"}>Aqui</Link> para se logar</p>
             </div>
         </div>    
     )

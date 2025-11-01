@@ -81,3 +81,24 @@ html {
     color: #9c9c9c;
     font-weight: bold;
 }
+
+/* Responsividade */
+
+@media (max-width: 720px) {
+    .nav a {
+        font-size: 1rem;
+    }
+    .nav a:hover {
+    color: #5c5c5c;
+      font-size: 1.1rem;
+}
+    .user-area span{
+        font-size: 0.9rem;
+    }
+
+    .button-closeacount {
+    width: 80px;
+    height: 30px;
+    }
+}
+

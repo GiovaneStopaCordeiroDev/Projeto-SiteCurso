@@ -8,8 +8,8 @@ import Home from './pages/Home'
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={ <Cadastro/> }/>
-                    <Route path="/home" element={ <Home/> }/>
+                    <Route path="/cadastro" element={ <Cadastro/> }/>
+                    <Route path="/" element={ <Home/> }/>
                     <Route path="/login" element={ <Login/> }/>
                 </Routes>
             </BrowserRouter>

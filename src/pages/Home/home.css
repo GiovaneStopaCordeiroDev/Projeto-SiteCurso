@@ -37,6 +37,7 @@ html, body, #root {
   width: 100%;
   height: 100%;
   z-index: -1;
+    object-fit: cover;
 }
 
 .bg-video {
@@ -197,8 +198,7 @@ html, body, #root {
 }
 
 .conteudo:hover {
-    width: 300px;
-    height: 56vh;
+transform: scale(1.1);
 }
 
 .conteudo-html {
@@ -335,6 +335,8 @@ html, body, #root {
 .preco-basico {
     color: #060061;
 }
+
+
 /*Responsividade*/
 
 
@@ -371,5 +373,26 @@ html, body, #root {
 
     .title-pacotes {
         font-size: 4rem;
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 765px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .sessao-beneficios {
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+
+    .conteudo {
+        width: 290px;
+        height: 45vh;
     }
 }

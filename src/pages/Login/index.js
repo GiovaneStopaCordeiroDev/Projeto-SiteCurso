@@ -13,11 +13,15 @@ function Login() {
     const [detail, setDetail] = useState({})
     const navigate = useNavigate()
 
-    async function cadastrarUsuario() {
+
+
+    async function conectarUsuario() {
         await signInWithEmailAndPassword(auth, email, senha)
 
+        
+
         .then((value) => {
-            navigate('/home')
+            navigate('/')
             setDetail({
                 uid: value.user.uid,
                 email: value.user.email,
@@ -26,22 +30,24 @@ function Login() {
             setUser(true)
         })
 
-         .catch((e) => {
-                if (e.code === 'auth/invalid-email') {
-                    toast.warn('Formato de e-mail inválido!');
-                } else if (e.code === 'auth/weak-password') {
-                    toast.warn('Sua senha deve ter no mínimo 6 caracteres!');
-                } else if (e.code === 'auth/invalid-email') {
-                    toast.warn('Formato de e-mail inválido!');
-                } 
+        .catch((e) => {
+            if (e.code === 'auth/invalid-email') {
+                toast.warn('Formato de e-mail inválido!');
+            }else if (e.code === 'auth/weak-password') {
+                toast.warn('Sua senha deve ter no mínimo 6 caracteres!');
+            }else if (e.code === 'auth/invalid-credential'){
+                   toast.warn('Email ou Senha inválidos!');
+             } else {
+            toast.warn('Erro ao cadastrar: ' + e.code);
+            }
 
-            })    
+        })    
                 
     }
 
     return (
 
-        <div className="cadastro">
+        <div className="login">
             <div class="container">
                 <h1>Login</h1>
                 <div class="form">
@@ -53,14 +59,15 @@ function Login() {
 
                     <label>Senha</label>
                     <input placeholder="Digite sua senha"
+                        type="password"
                         value={senha}
                         onChange={(e) => setSenha(e.target.value)}
                     />
                 </div>
                 
-                    <button onClick={cadastrarUsuario}>Logar-se</button>
+                    <button onClick={conectarUsuario}>Logar-se</button>
 
-                    <p>Ainda não tem uma conta? Clique <Link to={"/"}>Aqui</Link> para se registrar</p>
+                    <p>Ainda não tem uma conta? Clique <Link className="p-link"to={"/cadastro"}>Aqui</Link> para se registrar</p>
             </div>
         </div>    
     )
